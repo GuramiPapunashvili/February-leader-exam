@@ -21,8 +21,8 @@ const PostForm = ({user,posts,setPosts}) => {
         <div>
             <h2>Add a post</h2>
             <form onSubmit={addPost}>
-                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title"/>
-                <input type="text" value={body} onChange={(e) => setBody(e.target.value)} placeholder="info"/>
+                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required/>
+                <input type="text" value={body} onChange={(e) => setBody(e.target.value)} placeholder="info" required/>
                 <label>
                     make the post private?
                     <input type="checkbox" checked={isPrivate} onChange={() => setIsPrivate(!isPrivate)}/>
